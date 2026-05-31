@@ -1,0 +1,89 @@
+{
+  "info": {
+    "_postman_id": "e8bb8f1b-f74d-4b7f-b9b4-9e10e2417f4f",
+    "name": "Church Platform Sample",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "CMS News - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "http://localhost:8083/api/news",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8083",
+          "path": ["api", "news"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Sunday Worship\",\n  \"slug\": \"sunday-worship\",\n  \"content\": \"Weekly worship update\",\n  \"excerpt\": \"Worship highlights\",\n  \"imageUrl\": \"https://example.com/news.jpg\",\n  \"authorId\": 1,\n  \"status\": \"DRAFT\"\n}"
+        }
+      }
+    },
+    {
+      "name": "CMS Menu - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "http://localhost:8083/api/cms/menus",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8083",
+          "path": ["api", "cms", "menus"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Home\",\n  \"url\": \"/\",\n  \"displayOrder\": 1,\n  \"active\": true,\n  \"menuGroup\": \"main\"\n}"
+        }
+      }
+    },
+    {
+      "name": "CMS Content Block - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "http://localhost:8083/api/cms/pages/1/blocks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8083",
+          "path": ["api", "cms", "pages", "1", "blocks"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"blockType\": \"HERO\",\n  \"title\": \"Welcome\",\n  \"body\": \"Welcome to our church\",\n  \"imageUrl\": \"https://example.com/hero.jpg\",\n  \"displayOrder\": 1,\n  \"active\": true\n}"
+        }
+      }
+    },
+    {
+      "name": "Site Setting - Upsert",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "http://localhost:8086/api/settings/church.phone",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8086",
+          "path": ["api", "settings", "church.phone"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "\"+62-21-0000000\""
+        }
+      }
+    }
+  ]
+}

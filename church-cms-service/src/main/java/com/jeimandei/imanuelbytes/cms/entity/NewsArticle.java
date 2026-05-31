@@ -10,26 +10,26 @@ import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "cms_pages")
-public class CmsPage extends BaseEntity {
+@Table(name = "news_articles")
+public class NewsArticle extends BaseEntity {
 
-    @Column(nullable = false, length = 180)
+    @Column(nullable = false, length = 220)
     private String title;
 
-    @Column(nullable = false, unique = true, length = 200)
+    @Column(nullable = false, unique = true, length = 240)
     private String slug;
-
-    @Column(nullable = false, length = 40)
-    private String pageType;
 
     @Column(nullable = false, length = 4000)
     private String content;
 
-    @Column(length = 200)
-    private String metaTitle;
+    @Column(length = 1000)
+    private String excerpt;
 
-    @Column(length = 500)
-    private String metaDescription;
+    @Column(length = 255)
+    private String imageUrl;
+
+    @Column
+    private Long authorId;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 16)
@@ -42,14 +42,14 @@ public class CmsPage extends BaseEntity {
     public void setTitle(String title) { this.title = title; }
     public String getSlug() { return slug; }
     public void setSlug(String slug) { this.slug = slug; }
-    public String getPageType() { return pageType; }
-    public void setPageType(String pageType) { this.pageType = pageType; }
     public String getContent() { return content; }
     public void setContent(String content) { this.content = content; }
-    public String getMetaTitle() { return metaTitle; }
-    public void setMetaTitle(String metaTitle) { this.metaTitle = metaTitle; }
-    public String getMetaDescription() { return metaDescription; }
-    public void setMetaDescription(String metaDescription) { this.metaDescription = metaDescription; }
+    public String getExcerpt() { return excerpt; }
+    public void setExcerpt(String excerpt) { this.excerpt = excerpt; }
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    public Long getAuthorId() { return authorId; }
+    public void setAuthorId(Long authorId) { this.authorId = authorId; }
     public ContentStatus getStatus() { return status; }
     public void setStatus(ContentStatus status) { this.status = status; }
     public LocalDateTime getPublishedAt() { return publishedAt; }
