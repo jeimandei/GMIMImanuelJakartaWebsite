@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: church-gateway-service
+  thymeleaf:
+    cache: false
+
+logging:
+  level:
+    root: INFO
+    com.jeimandei.imanuelbytes.gateway: INFO

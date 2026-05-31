@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /f/Users/Repository/GMIMImanuelJakartaWebsite/{db,church-common/src/main/java/com/jeimandei/imanuelbytes/common…)",
+      "Bash(try { $base='F:\\Users\\Repository\\GMIMImanuelJakartaWebsite'; $dirs=@('db','church-common\\src\\main\\java\\com\\jeimandei\\ima…)",
+      "Bash(python -c \"import os; base=r'F:\\\\Users\\\\Repository\\\\GMIMImanuelJakartaWebsite'; dirs=['db','church-common/src/main/java/…)",
+      "Bash(powershell -NoProfile -Command \"$base='F:\\Users\\Repository\\GMIMImanuelJakartaWebsite'; $dirs=@('db','church-common\\src\\m…)",
+      "Bash(powershell -NoProfile -Command \"Set-Location 'F:\\Users\\Repository\\GMIMImanuelJakartaWebsite'; mvn clean verify 2>&1\")",
+      "Bash(powershell -NoProfile -Command \"Set-Location 'F:\\Users\\Repository\\GMIMImanuelJakartaWebsite'; where.exe mvn 2>&1\")",
+      "Bash(powershell -NoProfile -Command \"Get-Command java 2>&1\")"
+    ]
+  }
+}

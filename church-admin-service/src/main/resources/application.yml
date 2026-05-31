@@ -1,0 +1,13 @@
+server:
+  port: 8087
+
+spring:
+  application:
+    name: church-admin-service
+  thymeleaf:
+    cache: false
+
+logging:
+  level:
+    root: INFO
+    com.jeimandei.imanuelbytes.admin: INFO
